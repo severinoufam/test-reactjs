@@ -1,38 +1,70 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9f9;
+  color: #333;
+}
+
+.app-bar {
+  position: fixed;
+  background-color: #1976d2;
+}
+
+.dashboard-container {
+  padding: 20px;
+  background-color: #f8f9f9;
+}
+
+.dashboard-panel {
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.panel-title {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #1976d2;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.table-container {
+  max-height: 0px;
+  margin-top: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: #f4f6f8;
+  z-index: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.table-pagination {
+  background-color: #f4f6f8;
+  padding: 10px;
+}
+
+.name-cell {
+  max-width: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.data-table-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.chart-container {
+  flex: 0 0 400px;
 }
